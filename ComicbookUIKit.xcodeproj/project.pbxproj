@@ -27,6 +27,7 @@
 		18260FB729638B8B00A350BF /* UIImage + URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18260FB629638B8B00A350BF /* UIImage + URL.swift */; };
 		182D005A2964B65500376EDB /* MBProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 182D00592964B65500376EDB /* MBProgressHUD */; };
 		182D005C2964BF3200376EDB /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182D005B2964BF3200376EDB /* SearchController.swift */; };
+		182D00602964D44900376EDB /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182D005F2964D44900376EDB /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		18260FAE29636B0700A350BF /* ComicRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicRepository.swift; sourceTree = "<group>"; };
 		18260FB629638B8B00A350BF /* UIImage + URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + URL.swift"; sourceTree = "<group>"; };
 		182D005B2964BF3200376EDB /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		182D005F2964D44900376EDB /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,11 +123,9 @@
 		18260F63295A0A5200A350BF /* ComicbookUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				182D005E2964D3FD00376EDB /* Interface */,
 				18260FB529638B7600A350BF /* UIKit */,
 				18260F97295A0B7800A350BF /* Logic */,
-				18260F96295A0B6C00A350BF /* Controller */,
-				18260F95295A0B6300A350BF /* Model */,
-				18260F94295A0B5B00A350BF /* View */,
 				18260F64295A0A5200A350BF /* AppDelegate.swift */,
 				18260F66295A0A5200A350BF /* SceneDelegate.swift */,
 				18260F6A295A0A5200A350BF /* Main.storyboard */,
@@ -174,6 +174,7 @@
 			children = (
 				18260F68295A0A5200A350BF /* ViewController.swift */,
 				182D005B2964BF3200376EDB /* SearchController.swift */,
+				182D005F2964D44900376EDB /* WebViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -181,6 +182,7 @@
 		18260F97295A0B7800A350BF /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				182D005D2964D3CF00376EDB /* Persistance */,
 				18260F98295A0B7F00A350BF /* Networking */,
 				18260FA2296352F600A350BF /* AppCoordinator.swift */,
 				18260FA62963588B00A350BF /* Constants.swift */,
@@ -205,6 +207,23 @@
 				18260FB629638B8B00A350BF /* UIImage + URL.swift */,
 			);
 			name = UIKit;
+			sourceTree = "<group>";
+		};
+		182D005D2964D3CF00376EDB /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Persistance;
+			sourceTree = "<group>";
+		};
+		182D005E2964D3FD00376EDB /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				18260F96295A0B6C00A350BF /* Controller */,
+				18260F95295A0B6300A350BF /* Model */,
+				18260F94295A0B5B00A350BF /* View */,
+			);
+			name = Interface;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,6 +374,7 @@
 				18260FAF29636B0700A350BF /* ComicRepository.swift in Sources */,
 				18260FA3296352F600A350BF /* AppCoordinator.swift in Sources */,
 				18260F9C295A0CDA00A350BF /* Service.swift in Sources */,
+				182D00602964D44900376EDB /* WebViewController.swift in Sources */,
 				18260F65295A0A5200A350BF /* AppDelegate.swift in Sources */,
 				18260F67295A0A5200A350BF /* SceneDelegate.swift in Sources */,
 			);

@@ -109,8 +109,8 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
             return UICollectionViewCell()
         }
         // don't really like it but i'm on the clock over here :)
-        cell.contentView.backgroundColor = #colorLiteral(red: 0.5843137255, green: 0.8823529412, blue: 0.8274509804, alpha: 1)
         cell.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
+        cell.delegate = self
         if indexPath.item < Coordinator.repo.comics.count {
             cell.setupViews(with: Coordinator.repo.comics[indexPath.item])
         } else {
@@ -143,5 +143,15 @@ extension ViewController {
                 print(error)
             }
         }
+    }
+}
+
+
+// MARK: WebView presentation
+extension ViewController: ExplanationDelegate {
+    func showWebView(with num: Int) {
+        let webVC = WebViewController()
+        webVC.comicNumber = num
+        present(webVC, animated: true)
     }
 }
