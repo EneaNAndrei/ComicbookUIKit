@@ -22,10 +22,11 @@
 		18260FA1296343B800A350BF /* ComicRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18260FA0296343B800A350BF /* ComicRequest.swift */; };
 		18260FA3296352F600A350BF /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18260FA2296352F600A350BF /* AppCoordinator.swift */; };
 		18260FA72963588C00A350BF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18260FA62963588B00A350BF /* Constants.swift */; };
-		18260FAA2963599900A350BF /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = 18260FA92963599900A350BF /* TinyConstraints */; };
 		18260FAD296359CB00A350BF /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18260FAC296359CB00A350BF /* CarouselCell.swift */; };
 		18260FAF29636B0700A350BF /* ComicRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18260FAE29636B0700A350BF /* ComicRepository.swift */; };
 		18260FB729638B8B00A350BF /* UIImage + URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18260FB629638B8B00A350BF /* UIImage + URL.swift */; };
+		182D005A2964B65500376EDB /* MBProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 182D00592964B65500376EDB /* MBProgressHUD */; };
+		182D005C2964BF3200376EDB /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182D005B2964BF3200376EDB /* SearchController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		18260FAC296359CB00A350BF /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
 		18260FAE29636B0700A350BF /* ComicRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicRepository.swift; sourceTree = "<group>"; };
 		18260FB629638B8B00A350BF /* UIImage + URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + URL.swift"; sourceTree = "<group>"; };
+		182D005B2964BF3200376EDB /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18260FAA2963599900A350BF /* TinyConstraints in Frameworks */,
+				182D005A2964B65500376EDB /* MBProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				18260F68295A0A5200A350BF /* ViewController.swift */,
+				182D005B2964BF3200376EDB /* SearchController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -221,7 +224,7 @@
 			);
 			name = ComicbookUIKit;
 			packageProductDependencies = (
-				18260FA92963599900A350BF /* TinyConstraints */,
+				182D00592964B65500376EDB /* MBProgressHUD */,
 			);
 			productName = ComicbookUIKit;
 			productReference = 18260F61295A0A5200A350BF /* ComicbookUIKit.app */;
@@ -296,7 +299,7 @@
 			);
 			mainGroup = 18260F58295A0A5200A350BF;
 			packageReferences = (
-				18260FA82963599900A350BF /* XCRemoteSwiftPackageReference "TinyConstraints" */,
+				182D00582964B65500376EDB /* XCRemoteSwiftPackageReference "MBProgressHUD" */,
 			);
 			productRefGroup = 18260F62295A0A5200A350BF /* Products */;
 			projectDirPath = "";
@@ -344,6 +347,7 @@
 				18260F9A295A0B8F00A350BF /* BaseRequest.swift in Sources */,
 				18260FA1296343B800A350BF /* ComicRequest.swift in Sources */,
 				18260FAD296359CB00A350BF /* CarouselCell.swift in Sources */,
+				182D005C2964BF3200376EDB /* SearchController.swift in Sources */,
 				18260F9F296341EF00A350BF /* Comic.swift in Sources */,
 				18260F69295A0A5200A350BF /* ViewController.swift in Sources */,
 				18260FB729638B8B00A350BF /* UIImage + URL.swift in Sources */,
@@ -696,21 +700,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		18260FA82963599900A350BF /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
+		182D00582964B65500376EDB /* XCRemoteSwiftPackageReference "MBProgressHUD" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/roberthein/TinyConstraints.git";
+			repositoryURL = "https://github.com/jdg/MBProgressHUD";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		18260FA92963599900A350BF /* TinyConstraints */ = {
+		182D00592964B65500376EDB /* MBProgressHUD */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 18260FA82963599900A350BF /* XCRemoteSwiftPackageReference "TinyConstraints" */;
-			productName = TinyConstraints;
+			package = 182D00582964B65500376EDB /* XCRemoteSwiftPackageReference "MBProgressHUD" */;
+			productName = MBProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

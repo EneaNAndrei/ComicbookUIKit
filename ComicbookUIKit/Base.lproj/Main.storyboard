@@ -55,13 +55,23 @@
                                                         <constraint firstAttribute="height" constant="247.66666666666663" id="okS-Kl-Pqd"/>
                                                     </constraints>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x4U-K7-hS3">
+                                                    <rect key="frame" x="156" y="719" width="78" height="35"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Search"/>
+                                                    <connections>
+                                                        <action selector="showSearchController" destination="BYZ-38-t0r" eventType="touchUpInside" id="fnB-xG-jID"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="UnV-Zh-mbu" secondAttribute="bottom" constant="20" id="CjU-0R-xZ9"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UnV-Zh-mbu" secondAttribute="trailing" constant="16" id="Htk-9U-6eb"/>
+                                                <constraint firstItem="x4U-K7-hS3" firstAttribute="centerX" secondItem="5cX-Si-nUP" secondAttribute="centerX" id="Myj-gR-hFI"/>
                                                 <constraint firstItem="e8r-H7-WbI" firstAttribute="top" secondItem="5cX-Si-nUP" secondAttribute="top" constant="46" id="QjO-6N-YtR"/>
                                                 <constraint firstItem="e8r-H7-WbI" firstAttribute="centerX" secondItem="5cX-Si-nUP" secondAttribute="centerX" id="Rwp-Yv-8Y4"/>
                                                 <constraint firstItem="UnV-Zh-mbu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5cX-Si-nUP" secondAttribute="leading" constant="16" id="Vgq-lS-Xlg"/>
+                                                <constraint firstAttribute="bottom" secondItem="x4U-K7-hS3" secondAttribute="bottom" constant="19" id="Wq7-h4-hw2"/>
                                                 <constraint firstItem="0vi-p6-eh8" firstAttribute="leading" secondItem="5cX-Si-nUP" secondAttribute="leading" constant="27" id="ZwK-tE-0A4"/>
                                                 <constraint firstItem="0vi-p6-eh8" firstAttribute="top" secondItem="5cX-Si-nUP" secondAttribute="top" constant="97" id="b8Q-4e-sM5"/>
                                                 <constraint firstItem="UnV-Zh-mbu" firstAttribute="top" secondItem="0vi-p6-eh8" secondAttribute="bottom" constant="113" id="gXh-kn-19f"/>
@@ -117,11 +127,65 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="zPa-2v-nQ6" id="yy3-R7-lLp"/>
+                        <segue destination="pdN-fs-toX" kind="presentation" identifier="SearchComic" id="l9B-ev-dFt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="130.76923076923077" y="-28.436018957345969"/>
+        </scene>
+        <!--Search Controller-->
+        <scene sceneID="HPP-Ya-Iab">
+            <objects>
+                <viewController id="pdN-fs-toX" customClass="SearchController" customModule="ComicbookUIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cx9-lh-oxK">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2U2-Im-n7U">
+                                <rect key="frame" x="25" y="186" width="340" height="248"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="248" id="69G-fi-jfU"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmy-vH-uoM">
+                                <rect key="frame" x="169" y="498.99999999999994" width="52" height="26.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huj-jS-lMG">
+                                <rect key="frame" x="166.66666666666666" y="107" width="57" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eM6-M7-r0p"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eM6-M7-r0p" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hmy-vH-uoM" secondAttribute="trailing" constant="20" id="1Uq-3p-dCP"/>
+                            <constraint firstItem="2U2-Im-n7U" firstAttribute="centerX" secondItem="eM6-M7-r0p" secondAttribute="centerX" id="Czu-Iz-JPp"/>
+                            <constraint firstItem="hmy-vH-uoM" firstAttribute="centerX" secondItem="eM6-M7-r0p" secondAttribute="centerX" id="DQO-F4-ABE"/>
+                            <constraint firstItem="huj-jS-lMG" firstAttribute="top" secondItem="eM6-M7-r0p" secondAttribute="top" constant="60" id="J5x-BW-St7"/>
+                            <constraint firstItem="huj-jS-lMG" firstAttribute="centerX" secondItem="eM6-M7-r0p" secondAttribute="centerX" id="RIw-gu-WTx"/>
+                            <constraint firstItem="eM6-M7-r0p" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hmy-vH-uoM" secondAttribute="bottom" constant="20" id="VcU-XF-y0V"/>
+                            <constraint firstItem="eM6-M7-r0p" firstAttribute="trailing" secondItem="2U2-Im-n7U" secondAttribute="trailing" constant="25" id="eN4-pb-PmS"/>
+                            <constraint firstItem="hmy-vH-uoM" firstAttribute="top" secondItem="2U2-Im-n7U" secondAttribute="bottom" constant="65" id="jir-Wb-Iec"/>
+                            <constraint firstItem="hmy-vH-uoM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eM6-M7-r0p" secondAttribute="leading" constant="20" id="nBk-9X-Ej7"/>
+                            <constraint firstItem="2U2-Im-n7U" firstAttribute="leading" secondItem="eM6-M7-r0p" secondAttribute="leading" constant="25" id="pyO-zi-jHd"/>
+                            <constraint firstItem="2U2-Im-n7U" firstAttribute="top" secondItem="huj-jS-lMG" secondAttribute="bottom" constant="50" id="zRk-mc-Kb9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="hmy-vH-uoM" id="gqi-h9-nOA"/>
+                        <outlet property="imageView" destination="2U2-Im-n7U" id="v3w-cn-zUd"/>
+                        <outlet property="titleLabel" destination="huj-jS-lMG" id="9Xs-9k-RKV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f9Q-kN-yXb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1045" y="-28"/>
         </scene>
     </scenes>
     <resources>
